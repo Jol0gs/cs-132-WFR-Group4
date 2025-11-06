@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5 {
   background: var(--gray);
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1158px) {
   .nav-right {
     position: absolute;
     top: 100%;
