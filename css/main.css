@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 body {
@@ -116,6 +117,14 @@ body {
   color: var(--gray);
 }
 
+.navbar.scrolled .nav-right li a:hover {
+  color: var(--secondary);
+}
+
+.navbar.scrolled .nav-right li a:hover::after {
+  width: 100%;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -195,11 +204,13 @@ section {
   scroll-margin-top: 80px;
 }
 
-#overview { background: var(--background); }
-#data { background: #f0dbbe; }
-#methods { background: var(--background); }
-#results { background: #f0dbbe; }
-#team { background: var(--background); }
+section:nth-of-type(odd) {
+  background: var(--background);
+}
+
+section:nth-of-type(even) {
+  background: #f0dbbe;
+}
 
 h2 {
   text-align: center;
