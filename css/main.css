@@ -1,5 +1,5 @@
 :root {
-  --primary: #d97706;
+  --primary: #e4953b;
   --secondary: #e4aa6c;
   --accent: #b17636;
   --background: #fff2e4;
@@ -15,6 +15,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  text-align: justify;
   line-height: 1.6;
   color: var(--text);
   margin: 0;
@@ -198,10 +199,17 @@ main {
 }
 
 section {
-  min-height: 100vh;
-  padding: 80px 20px;
+  padding: 120px 80px;
   max-width: 100%;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 60px;
+}
+
+section > *:first-child {
+  margin-top: 0;
+}
+
+section > *:last-child {
+  margin-bottom: 0;
 }
 
 section:nth-of-type(odd) {
@@ -218,6 +226,7 @@ h2 {
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 20px;
+  margin-top: -20px;
   position: relative;
 }
 
@@ -229,6 +238,34 @@ h2::after {
   background: var(--accent);
   margin: 10px auto 0 auto;
   border-radius: 2px;
+}
+
+#data a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+#data a:hover:not(.data-button) {
+  color: var(--primary);
+}
+
+.data-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.data-button:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: translateY(-2px);
 }
 
 .team-members {
