@@ -1,6 +1,7 @@
 :root {
   --primary: #e4953b;
   --secondary: #e4aa6c;
+  --tertiary: #eacbaa;
   --accent: #b17636;
   --background: #fff2e4;
   --white: #fff8f0;
@@ -14,13 +15,17 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
   text-align: justify;
   line-height: 1.6;
   color: var(--text);
   margin: 0;
   padding: 0;
   background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', serif;
 }
 
 .home {
@@ -147,7 +152,7 @@ body {
   background: var(--gray);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1130px) {
   .nav-right {
     position: absolute;
     top: 100%;
@@ -199,7 +204,7 @@ main {
 }
 
 section {
-  padding: 120px 80px;
+  padding: 60px 80px;
   max-width: 100%;
   scroll-margin-top: 60px;
 }
@@ -238,6 +243,43 @@ h2::after {
   background: var(--accent);
   margin: 10px auto 0 auto;
   border-radius: 2px;
+}
+
+#overview h3 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.background {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  text-align: justify;
+}
+
+.rq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rq-item {
+  background: var(--tertiary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.rq-item h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#hypo {
+  background: var(--accent);
+  color: var(--background)
 }
 
 #data a {

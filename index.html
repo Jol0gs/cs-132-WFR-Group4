@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poverty Analysis in the Philippines</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Poppins:wght@500;600&display=swap">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -37,23 +38,35 @@
     <main class="container">
         <section id="overview">
             <h2>Overview</h2>
-            <h3>Background</h3>
-            <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. This is why poverty reduction is one of the central foundations of the <strong>United Nations' SDG 1 (No Poverty)</strong>.</p>
-            <p>It has always been one of the Philippines' persistent issues and is often linked to <strong>income inequality, inflation, regional disparities, and employment challenges</strong>.</p>
-            <p>To address this, national and international institutions like the <strong>PSA, ADB, and World Bank</strong> regularly track data related to poverty. Given these data, we can integrate them to enable deeper analysis of factors and trends.</p>
+            <div class="background">
+                <h3>Background</h3>
+                <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. Reducing poverty is a main goal of the <b>United Nations' SDG 1 (No Poverty)</b>, which pushes for equal opportunities and a better quality of life for everyone. Despite years of development, poverty in the country is still closely tied to <b>income inequality</b>, <b>inflation</b>, <b>regional differences</b>, and <b>employment challenges</b> that affect many Filipino families.</p>
+                <p>To better understand and address these issues, national and international institutions like the <b>Philippine Statistics Authority (PSA)</b>, <b>Asian Development Bank (ADB)</b>, and <b>World Bank</b> regularly track and publish data related to poverty. By combining and analyzing these datasets, we can gain clearer insights into the factors and trends behind poverty in the country and come up with more effective, data-driven solutions.</p>
+            </div>
 
-            <h3>Research Questions</h3>
-            <ul>
-                <li><strong>Trend Analysis</strong> – How has the poverty headcount ratio in the Philippines evolved throughout the years?</li>
-                <li><strong>Determinants of Poverty</strong> – What demographic or economic factors (e.g., GDP per capita, employment rate) correlate with changes in poverty levels?</li>
-                <li><strong>Forecasting</strong> – Can we predict the poverty headcount for <strong>2025</strong> based on recent trends of these factors?</li>
-            </ul>
+            <h3>Research Questions & Hypotheses</h3>
+            <div class="rq-grid">
+                <div class="rq-item">
+                    <h4>Trend Analysis</h4>
+                    <p>How does the poverty headcount ratio in the Philippines change over time?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> There is <mark id="hypo"><b>no significant change</b></mark> in the poverty headcount ratio over time.</p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant change in the poverty headcount ratio over time.</p></p>
+                </div>
 
-            <h3>Hypothesis</h3>
-            <ul>
-                <li><strong>Null Hypothesis (H₀):</strong> No significant correlation exists between GDP per capita (or employment rate) and poverty headcount.</li>
-                <li><strong>Alternative Hypothesis (H₁):</strong> There is a significant correlation between GDP per capita (or employment rate) and poverty headcount.</li>
-            </ul>
+                <div class="rq-item">
+                    <h4>Poverty Determinants</h4>
+                    <p>What demographic or economic factors (e.g., GDP per capita, employment rate) are correlated with changes in poverty levels?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="hypo"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant correlation between the selected economic factors and poverty levels.</p>
+                </div>
+
+                <div class="rq-item">
+                    <h4>Poverty Forecasting</h4>
+                    <p>How can recent trends of these factors be used to predict the poverty headcount for <b>2025</b>?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> Recent economic trends <mark id="hypo"><b>cannot significantly predict</b></mark> future poverty headcount.</p></p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> Recent economic trends can significantly predict future poverty headcount.</p>
+                </div>
+            </div>
         </section>
 
         <section id="data">
@@ -120,7 +133,7 @@
         });
 
         function scroller() {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 1130) {
                 if (window.scrollY > window.innerHeight * 0.8) { navbar.classList.add('scrolled'); }
                 else { navbar.classList.remove('scrolled'); }
             }
