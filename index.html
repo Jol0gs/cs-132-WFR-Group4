@@ -108,6 +108,13 @@
         </section>
     </main>
     <script>
+        window.onload = function() {
+            if (window.location.hash) {
+            window.location.hash = '';
+            }
+            window.scrollTo(0, 0);
+        };
+
         const hamburger = document.getElementById('hamburger');
         const navRight = document.getElementById('nav-right');
         const navbar = document.querySelector('.navbar');
