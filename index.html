@@ -150,9 +150,7 @@
     </main>
     <script>
         window.onload = function() {
-            if (window.location.hash) {
-            window.location.hash = '';
-            }
+            if (window.location.hash) { window.location.hash = ''; }
             window.scrollTo(0, 0);
         };
 
@@ -160,9 +158,7 @@
         const navRight = document.getElementById('nav-right');
         const navbar = document.querySelector('.navbar');
 
-        hamburger.addEventListener('click', () => {
-            navRight.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => { navRight.classList.toggle('active'); });
 
         function scroller() {
             if (window.innerWidth > 1158) {
