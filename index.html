@@ -4,124 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poverty Analysis in the Philippines</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .nav-container {
-            position:sticky;
-            top: 0; 
-            display: flex;
-            align-items: center;
-            background: #444;
-            color: #fff;
-            padding: 10px 60px;
-            gap:120px;
-        }
-        h4 {
-            margin: 0;
-            font-size: 24px;
-            padding-left: 30px;
-        }
-        nav {
-            background: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #fff;
-            display: inline-block;
-            padding: 8px 12px;
-            border: 1px solid #fff;
-            border-radius: 4px;
-            background-color: #333;
-            transition: background-color 0.2s ease; 
-        }
-        
-        nav a:hover {
-            background-color: #fff;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        section {
-            scroll-margin-top: 100px;
-            margin-bottom: 40px;
-        }
-        h2, h3 {
-            color: #333;
-        }
-        .team-member {
-            margin: 10px 0;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: #ddd;
-        }
-        video {
-            display: block;
-            margin: 20px auto;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <video autoplay loop muted playsinline style="width:100%; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-            <source src="assets/videos/povertystock.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-left">Poverty Analysis in the Philippines</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-right" id="nav-right">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <header class="home" id="home">
+        <video autoplay loop muted playsinline>
+        <source src="assets/videos/povertystock.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
     </header>
 
-
-    <div class="nav-container">
-        <h4>Poverty Analysis in the Philippines</h4>
-
-        <nav>
-            <a href="#overview">Overview</a>
-            <a href="#data">Data</a>
-            <a href="#methods">Methods</a>
-            <a href="#results">Results</a>
-            <a href="#team">Team</a>
-        </nav>
-    </div>
-
-
-    <div class="container">
+    <main class="container">
         <section id="overview">
             <h2>Overview</h2>
             <h3>Background</h3>
@@ -129,7 +41,7 @@
             <p>It has always been one of the Philippines' persistent issues and is often linked to <strong>income inequality, inflation, regional disparities, and employment challenges</strong>.</p>
             <p>To address this, national and international institutions like the <strong>PSA, ADB, and World Bank</strong> regularly track data related to poverty. Given these data, we can integrate them to enable deeper analysis of factors and trends.</p>
 
-            <h3>Problem / Questions</h3>
+            <h3>Research Questions</h3>
             <ul>
                 <li><strong>Trend Analysis</strong> – How has the poverty headcount ratio in the Philippines evolved throughout the years?</li>
                 <li><strong>Determinants of Poverty</strong> – What demographic or economic factors (e.g., GDP per capita, employment rate) correlate with changes in poverty levels?</li>
@@ -175,33 +87,45 @@
         </section>
 
         <section id="team">
-            <h2>Team</h2>
-            <p>Hi. We are [Pending Group Name XD].</p>
-            <p>And this is our project, <strong>Poverty Analysis in the Philippines</strong>, a project aimed at analyzing poverty trends, determinants, and forecasting poverty headcount for 2025 in the Philippine context.</p>
-            <h3>Data Science Team</h3>
-            <div class="team-member">Resai Mangco, WFR</div>
-            <div class="team-member">Rain Lee, WFR</div>
-            <div class="team-member">Don Chavez, WFR</div>
-            <p>We'd like to hear from you.</p>
-            <p>[Placeholder if ya'll would like to add some "About us" stuff]</p>
-        </section>
-    </div>
-
-    <footer>
-        <div class="social-links">
-            <p>Find us on:</p>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-            <a href="#">Dribbble</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Tumblr</a>
-            <a href="#">Google+</a>
-            <a href="#">Github</a>
+        <h2>Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+            <img src="xxx.jpg" alt="Don Chavez">
+            <h3>Don Chavez</h3>
+            <p>WFR</p>
+            </div>
+            <div class="team-member">
+            <img src="xxx.jpg" alt="Rain Lee">
+            <h3>Rain Lee</h3>
+            <p>WFR</p>
+            </div>
+            <div class="team-member">
+            <img src="xxx.jpg" alt="Resai Mangco">
+            <h3>Resai Mangco</h3>
+            <p>WFR</p>
+            </div>
         </div>
-        <!-- <p>© Untitled. All rights reserved. Design: HTML5 UP</p> -->
-    </footer>
+        </section>
+    </main>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navRight = document.getElementById('nav-right');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            navRight.classList.toggle('active');
+        });
+
+        function scroller() {
+            if (window.innerWidth > 768) {
+                if (window.scrollY > window.innerHeight * 0.8) { navbar.classList.add('scrolled'); }
+                else { navbar.classList.remove('scrolled'); }
+            }
+            else { navbar.classList.remove('scrolled'); }
+        }
+
+        window.addEventListener('scroll', scroller);
+        window.addEventListener('resize', scroller);
+    </script>
 </body>
-
 </html>
-
-
