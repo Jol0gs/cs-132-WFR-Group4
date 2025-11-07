@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poverty Analysis in the Philippines</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Poppins:wght@500;600&display=swap">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -17,10 +18,12 @@
             </div>
             <ul class="nav-right" id="nav-right">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#overview">Overview</a></li>
+                <!--<li><a href="#overview">Overview</a></li>-->
+                <li><a href="#background">Background</a></li>
                 <li><a href="#data">Data</a></li>
-                <li><a href="#methods">Methods</a></li>
+                <li><a href="#methods">Methodology</a></li>
                 <li><a href="#results">Results</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
                 <li><a href="#team">Team</a></li>
             </ul>
         </div>
@@ -34,45 +37,71 @@
     </header>
 
     <main class="container">
+        <!--
         <section id="overview">
             <h2>Overview</h2>
-            <h3>Background</h3>
-            <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. This is why poverty reduction is one of the central foundations of the <strong>United Nations' SDG 1 (No Poverty)</strong>.</p>
-            <p>It has always been one of the Philippines' persistent issues and is often linked to <strong>income inequality, inflation, regional disparities, and employment challenges</strong>.</p>
-            <p>To address this, national and international institutions like the <strong>PSA, ADB, and World Bank</strong> regularly track data related to poverty. Given these data, we can integrate them to enable deeper analysis of factors and trends.</p>
+            <div class="background">
+                <h3>Background</h3>
+                <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. Reducing poverty is a main goal of the <b>United Nations' SDG 1 (No Poverty)</b>, which pushes for equal opportunities and a better quality of life for everyone. Despite years of development, poverty in the country is still closely tied to <b>income inequality</b>, <b>inflation</b>, <b>regional differences</b>, and <b>employment challenges</b> that affect many Filipino families.</p>
+                <p>To better understand and address these issues, national and international institutions like the <b>Philippine Statistics Authority (PSA)</b>, <b>Asian Development Bank (ADB)</b>, and <b>World Bank</b> regularly track and publish data related to poverty. By combining and analyzing these datasets, we can gain clearer insights into the factors and trends behind poverty in the country and come up with more effective, data-driven solutions.</p>
+            </div>
 
-            <h3>Research Questions</h3>
-            <ul>
-                <li><strong>Trend Analysis</strong> – How has the poverty headcount ratio in the Philippines evolved throughout the years?</li>
-                <li><strong>Determinants of Poverty</strong> – What demographic or economic factors (e.g., GDP per capita, employment rate) correlate with changes in poverty levels?</li>
-                <li><strong>Forecasting</strong> – Can we predict the poverty headcount for <strong>2025</strong> based on recent trends of these factors?</li>
-            </ul>
+            <h3>Research Questions & Hypotheses</h3>
+            <div class="rq-grid">
+                <div class="rq-item">
+                    <h4>Trend Analysis</h4>
+                    <p>How does the poverty headcount ratio in the Philippines change over time?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> There is <mark id="hypo"><b>no significant change</b></mark> in the poverty headcount ratio over time.</p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant change in the poverty headcount ratio over time.</p></p>
+                </div>
 
-            <h3>Hypothesis</h3>
-            <ul>
-                <li><strong>Null Hypothesis (H₀):</strong> No significant correlation exists between GDP per capita (or employment rate) and poverty headcount.</li>
-                <li><strong>Alternative Hypothesis (H₁):</strong> There is a significant correlation between GDP per capita (or employment rate) and poverty headcount.</li>
-            </ul>
+                <div class="rq-item">
+                    <h4>Poverty Determinants</h4>
+                    <p>What demographic or economic factors (e.g., GDP per capita, employment rate) are correlated with changes in poverty levels?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="hypo"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant correlation between the selected economic factors and poverty levels.</p>
+                </div>
+
+                <div class="rq-item">
+                    <h4>Poverty Forecasting</h4>
+                    <p>How can recent trends of these factors be used to predict the poverty headcount for <b>2025</b>?</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> Recent economic trends <mark id="hypo"><b>cannot significantly predict</b></mark> future poverty headcount.</p></p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> Recent economic trends can significantly predict future poverty headcount.</p>
+                </div>
+            </div>
+        </section>
+        -->
+        <section id="background">
+            <h2>Background</h2>
+            <div class="background">
+                <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. Reducing poverty is a main goal of the <b>United Nations' SDG 1 (No Poverty)</b>, which pushes for equal opportunities and a better quality of life for everyone. Despite years of development, poverty in the country is still closely tied to <b>income inequality</b>, <b>inflation</b>, <b>regional differences</b>, and <b>employment challenges</b> that affect many Filipino families.</p>
+                <p>To better understand and address these issues, national and international institutions like the <b>Philippine Statistics Authority (PSA)</b>, <b>Asian Development Bank (ADB)</b>, and <b>World Bank</b> regularly track and publish data related to poverty. By combining and analyzing these datasets, we can gain clearer insights into the factors and trends behind poverty in the country and come up with more effective, data-driven solutions.</p>
+            </div>
+
+            <div class="rq-grid">
+                <div class="rq-item">
+                    <h4>Research Questions</h4>
+                    <p>1. <b>Trend Analysis</b>: How does the poverty headcount ratio in the Philippines change over time?</li></p>
+                    <p>2. <b>Poverty Determinants</b>: What demographic or economic factors (e.g., GDP per capita, employment rate) are correlated with changes in poverty levels?</li></p>
+                    <p>3. <b>Poverty Forecasting</b>: How can recent trends of these factors be used to predict the poverty headcount for <b>2025</b>?</li></p>
+                </div>
+                
+                <div class="rq-item">
+                    <h4>Hypotheses</h4>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="hypo"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
+                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant correlation between the selected economic factors and poverty levels.</p>
+                </div>
+            </div>
         </section>
 
         <section id="data">
-            <h2>Data</h2>
-            <p>We searched for relevant datasets from official local and international organizations that provide data on income, poverty incidence, country-level aggregates, and other economic indicators:</p>
-            <ul>
-                <li><a href="https://psa.gov.ph/statistics/poverty">Philippine Statistics Authority (PSA) – Poverty Statistics</a></li>
-                <li><a href="https://psa.gov.ph/statistics/income-expenditure/fies">PSA – Family Income and Expenditure Survey (FIES)</a></li>
-                <li><a href="https://dataportal.asia/dataset_vocab_economy_names-Philippines">Asia Data Portal – Economy (Philippines)</a></li>
-                <li><a href="https://data.adb.org/dataset/basic-statistics-asia-and-pacific">ADB – Basic Statistics: Asia and Pacific</a></li>
-                <li><a href="https://data.mendeley.com/datasets/s76nh7dm4v/1">Mendeley Data – Poverty-Related Dataset</a></li>
-            </ul>
-            <p>The following link is our current dataset/s used for the project:</p>
-            <ul>
-                <li><a href="https://docs.google.com/spreadsheets/d/1C3mfjwhgAcyrKVtep4Nv2znQQUuOI9wZynZhV250GIA/edit?usp=sharing">Compiled Dataset/s</a></li>
-            </ul>
+            <h2>Data Collection & Repository</h2>
+            <p>The team gathered data from both national and international sources that provide data on income, poverty incidence, country-level aggregates, and other economic indicators to ensure the reliability and comprehensiveness of our analysis. Primary sources included the <b><a href="https://psa.gov.ph/statistics/poverty">Philippine Statistics Authority (PSA)</a></b>, through its <b><i><a href="https://psa.gov.ph/statistics/income-expenditure/fies">Poverty Statistics and Family Income and Expenditure Survey (FIES)</a></i></b>, complemented by datasets from the <b><a href="ttps://dataportal.asia/dataset_vocab_economy_names-Philippines">Asia Data Portal</a></b>, <b><a href="https://data.adb.org/dataset/basic-statistics-asia-and-pacific">Asian Development Bank (ADB)</a></b>, and <b><a href="https://data.mendeley.com/datasets/s76nh7dm4v/1">Mendeley Data</a></b>. These datasets were cleaned and combined to ensure consistency across indicators, helping us analyze poverty trends and the socioeconomic factors influencing them in the Philippines.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1C3mfjwhgAcyrKVtep4Nv2znQQUuOI9wZynZhV250GIA/edit?usp=sharing" class="data-button" target="_blank">View Our Datasets</a>
         </section>
 
         <section id="methods">
-            <h2>Methods</h2>
+            <h2>Methodology</h2>
             <p>Our proposed solutions and methodology include:</p>
             <ol>
                 <li>Use <strong>time-series analysis</strong> to track changes in poverty headcount ratio over multiple years.</li>
@@ -86,38 +115,53 @@
             <p>[Placeholder]</p>
         </section>
 
-        <section id="team">
-        <h2>Team</h2>
-        <div class="team-members">
-            <div class="team-member">
-            <img src="xxx.jpg" alt="Don Chavez">
-            <h3>Don Chavez</h3>
-            <p>WFR</p>
-            </div>
-            <div class="team-member">
-            <img src="xxx.jpg" alt="Rain Lee">
-            <h3>Rain Lee</h3>
-            <p>WFR</p>
-            </div>
-            <div class="team-member">
-            <img src="xxx.jpg" alt="Resai Mangco">
-            <h3>Resai Mangco</h3>
-            <p>WFR</p>
-            </div>
-        </div>
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>[Placeholder]</p>
         </section>
+
+        <section id="team">
+            <h2>Team</h2>
+            <h4>WFR</h4>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="images/anon.png" alt="Don Chavez">
+                    <h3>Don Chavez</h3>
+                    <p>[placeholder]</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/anon.png" alt="Rain Lee">
+                    <h3>Rain Lee</h3>
+                    <p>Hi! I'm Rain, a junior computer science student from UP Diliman. Outside academics, I find myself enjoying video games, binging crime documentaries, and petting random cats.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/anon.png" alt="Resai Mangco">
+                    <h3>Resai Mangco</h3>
+                    <p>[placeholder]</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <h4>[Group Name]</h4>
+        </footer>
     </main>
     <script>
+        window.onload = function() {
+            if (window.location.hash) { window.location.hash = ''; }
+            window.scrollTo(0, 0);
+        };
+
         const hamburger = document.getElementById('hamburger');
         const navRight = document.getElementById('nav-right');
         const navbar = document.querySelector('.navbar');
 
-        hamburger.addEventListener('click', () => {
-            navRight.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => { navRight.classList.toggle('active'); });
 
         function scroller() {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 1158) {
                 if (window.scrollY > window.innerHeight * 0.8) { navbar.classList.add('scrolled'); }
                 else { navbar.classList.remove('scrolled'); }
             }

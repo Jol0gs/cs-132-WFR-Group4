@@ -1,6 +1,7 @@
 :root {
-  --primary: #d97706;
+  --primary: #e4953b;
   --secondary: #e4aa6c;
+  --tertiary: #eacbaa;
   --accent: #b17636;
   --background: #fff2e4;
   --white: #fff8f0;
@@ -10,15 +11,21 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  text-align: justify;
   line-height: 1.6;
   color: var(--text);
   margin: 0;
   padding: 0;
   background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', serif;
 }
 
 .home {
@@ -116,6 +123,14 @@ body {
   color: var(--gray);
 }
 
+.navbar.scrolled .nav-right li a:hover {
+  color: var(--secondary);
+}
+
+.navbar.scrolled .nav-right li a:hover::after {
+  width: 100%;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -137,7 +152,7 @@ body {
   background: var(--gray);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1158px) {
   .nav-right {
     position: absolute;
     top: 100%;
@@ -189,17 +204,26 @@ main {
 }
 
 section {
-  min-height: 100vh;
-  padding: 80px 20px;
+  padding: 60px 80px;
   max-width: 100%;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 60px;
 }
 
-#overview { background: var(--background); }
-#data { background: #f0dbbe; }
-#methods { background: var(--background); }
-#results { background: #f0dbbe; }
-#team { background: var(--background); }
+section > *:first-child {
+  margin-top: 0;
+}
+
+section > *:last-child {
+  margin-bottom: 0;
+}
+
+section:nth-of-type(odd) {
+  background: var(--background);
+}
+
+section:nth-of-type(even) {
+  background: #f0dbbe;
+}
 
 h2 {
   text-align: center;
@@ -207,6 +231,7 @@ h2 {
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 20px;
+  margin-top: -20px;
   position: relative;
 }
 
@@ -220,20 +245,135 @@ h2::after {
   border-radius: 2px;
 }
 
+#overview h3 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.background {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  text-align: justify;
+}
+
+.rq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rq-item {
+  background: var(--tertiary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rq-item h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.rq-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#hypo {
+  background: var(--accent);
+  color: var(--background)
+}
+
+#data a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+#data a:hover:not(.data-button) {
+  color: var(--primary);
+}
+
+.data-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.data-button:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: translateY(-2px);
+}
+
+#team {
+  text-align: center;
+  padding: 80px 40px;
+}
+
 .team-members {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
 }
 
 .team-member {
-  margin: 20px;
-  text-align: center;
-  max-width: 200px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .team-member img {
-  width: 100%;
-  border-radius: 100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.team-member p {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  padding: 6px;
+}
+
+.footer h4 {
+  margin: 0;
+  font-weight: 500;
 }
