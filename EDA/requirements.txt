@@ -1,0 +1,9 @@
+pandas
+openpyxl
+numpy
+matplotlib
+scikit-learn
+seaborn
+statsmodels
+requests
+tabulate
