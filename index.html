@@ -84,7 +84,7 @@
                 
                 <div class="light-item">
                     <h4>Correlation and Regression Analysis</h4>
-                    <p>Use linear regression and multiple regression to test relationships between poverty levels and economic predictors.</p>
+                    <p>Use linear regression or spearman correlation to test relationships between poverty levels and economic predictors.</p>
                 </div>
 
                 <div class="dark-item">
@@ -103,17 +103,17 @@
                 <!-- TODO: Insert pictures of the graphs and description/analysis. -->
                 <div class="res-slides">
                     <div class="res-card">
-                        <img src="pic01.jpg" alt="[placeholder]">
+                        <img src="EDA/RQ1_Poverty_Trend.png" alt="Poverty Trend Graph based on World Bank Data">
                         <h4>Research Question 1 Visualization</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
-                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p> After plotting the obtained results from WorldBank data, we can observe that starting 2014, there is a noticeable decrease in the poverty headcount ratio in the Philippines. We can also observe that the trend is decreasing, showing signs that poverty may continue to lower in the following years</p>
+                        <p> Do note however, that after pre-processing raw data from WorldBank, we are only able to obtain 24 viable observations. even after data modifications or augmentation through forward and backward filling which is recommended for time-series data. This is also true for the next few research questions</p>
                     </div>
 
                     <div class="res-card">
-                        <img src="pic02.jpg" alt="[placeholder]">
+                        <img src="EDA/RQ2_Correlation.png" alt="Pairwise Correlation between Poverty and Economic Factors">
                         <h4>Research Question 2 Visualization</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
-                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p> We attempted to identify pairwise correlation between all related variables we obtained from the worldbank dataset, including Poverty, GDP, and Employment which is our focus for the second research question</p>
+                        <p> As we can observe from the heatmap generated, GDP appears to have a strong negative correlation with Poverty, while Employment appears to have a mild positive correlation with poverty. We can test these observations using Hypotheses testing which will be shown near the end of the result portion of this study!</p>
                     </div>
 
                     <div class="res-card">
@@ -124,10 +124,10 @@
                     </div>
 
                     <div class="res-card">
-                        <img src="pic04.jpg" alt="[placeholder]">
+                        <img src="EDA/hypothesis_testing.png" alt="Snippet for Spearman Correlation Hypothesis Testing">
                         <h4>Hypothesis Testing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
-                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p> We used spearman correlation tests for the hypothesis testing for this study. However, we reiterate that we were limited to 24 samples after cleaning the data, so we proceed with caution in obtaining interpretations for the data.</p>
+                        <p> As shown, there is significant negative correlation between GDP and poverty(p-value&lt; 0.0004), implying that with a higher GDP, we can expect poverty to be lower. Surprisingly, Employment does not have a significant enough correlation to say that it significantly affects poverty(p-value=0.693). This may be due to other factors such as the disparity between the rich and the poor or the wages of the employed aren't that high compared to a minimum standard.</p>
                     </div>
                 </div>
                 <button class="arrow"><i class="fas fa-chevron-circle-right"></i></button>
@@ -144,7 +144,18 @@
         <!------------- CONCLUSION ------------>
         <section id="conclusion">
             <h2>Conclusion</h2>
-            <p>[Placeholder]</p>
+            <p> In concluding our results, we would also like to express our overall findings, which includes the datasets we gathered and possible interpretation of the results obtained from processing the data.
+
+            <br><br> First of all, From the datasets we gathered, we can observe that poverty in the Philippines has been decreasing over the years, especially after 2014. This is may be a result of various economic factors, however, take this with a pinch of salt since as stated earlier, the number of samples we obtained after cleaning amounts to 24
+
+            <br><br> From the hypothesis testing we conducted, we can conclude that GDP has a significant negative correlation with poverty, which may imply that as the country's economy grows, poverty decreases. On the other hand, employment does not appear to have a significant correlation with poverty, which may be due to other factors such as wage disparity or underemployment. These factors can additionally improve the reliability of results and further explain the gaps in this study
+
+            <br><br> Overall, while our findings provide some insights into the relationship between economic factors and poverty in the Philippines, it is important to consider the limitations of our data and analysis. Further research with more comprehensive datasets and advanced analytical techniques may be needed to fully understand the complexities of poverty in the country. And moreover, we observed that international data is more reliable, consistent, and easier to interpret compared to national data, which may have discrepancies or missing values that can affect the analysis.
+
+            <br><br> With this, we encourage future researchers to take our warning into account that available national data has multiple caveats, and try to find readily available data that is consistent as national datasets aren't that reliable(Contrary to expectations)
+            
+            <br><br> With this, Thank you for reading our study!
+            </p>
         </section>
         <!------------------------------------->
 
@@ -157,7 +168,7 @@
                 <div class="team-member">
                     <img src="images/anon.png" alt="Don Chavez">
                     <h3>Don Chavez</h3>
-                    <p>[placeholder]</p>
+                    <p> Halloooooo!!! I'm Chavez, Senior ComSci Student from UP Diliman, who's forte is on MLAI, Topic Modeling, and a bit of WebDev. Outside of the field, I tend to play turn-based games or travel to see new sights, even just by walking XD</p>
                 </div>
 
                 <div class="team-member">
