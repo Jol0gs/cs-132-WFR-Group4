@@ -1,9 +1,15 @@
+/* This file is in the same order as the contents. */
+/* NOTE: Still not the best for mobile, but not a priority. */
+
+/* ---- General ---- */
 :root {
   --primary: #e4953b;
   --secondary: #e4aa6c;
   --tertiary: #eacbaa;
+  --quartenary: #f7e3cf;
   --accent: #b17636;
   --background: #fff2e4;
+  --bg2: #f0dbbe;
   --white: #fff8f0;
   --gray: #444;
   --text: #2e2e2e;
@@ -28,6 +34,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'Poppins', serif;
 }
 
+/* ---- Home and Navbar ---- */
 .home {
   position: relative;
   overflow: hidden;
@@ -199,6 +206,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* ---- Visual Aesthetics ---- */
 main {
   padding-top: -20px;
 }
@@ -222,7 +230,7 @@ section:nth-of-type(odd) {
 }
 
 section:nth-of-type(even) {
-  background: #f0dbbe;
+  background: var(--bg2);
 }
 
 h2 {
@@ -245,18 +253,14 @@ h2::after {
   border-radius: 2px;
 }
 
-#overview h3 {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
+/* ---- Background and Methodology ---- */
 .background {
   max-width: 1000px;
   margin: 0 auto 60px;
   text-align: justify;
 }
 
-.rq-grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -264,7 +268,7 @@ h2::after {
   margin: 0 auto;
 }
 
-.rq-item {
+.dark-item {
   background: var(--tertiary);
   padding: 20px;
   border-radius: 10px;
@@ -272,22 +276,31 @@ h2::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rq-item h4 {
+.light-item {
+  background: var(--quartenary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-item h4, .light-item h4 {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.rq-item:hover {
+.dark-item:hover, .light-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-#hypo {
+#highlight {
   background: var(--accent);
   color: var(--background)
 }
 
+/* ---- Data ---- */
 #data a {
   text-decoration: none;
   color: var(--text);
@@ -316,6 +329,149 @@ h2::after {
   transform: translateY(-2px);
 }
 
+/* ---- Results ---- */
+.res-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.res-slides {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.res-card {
+  flex: 0 0 80%;
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  scroll-snap-align: center;
+  background: var(--background);
+  border-radius: 12px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.res-card img {
+  display: block;
+  margin: 0 auto 12px;
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.res-card h4 {
+  text-align: center;
+}
+
+.res-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text);
+  margin: 0 0 0.8rem;
+}
+
+.res-card p:last-child {
+  margin-bottom: 0;
+}
+
+.res-card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px;
+}
+
+.arrow i {
+  font-size: 2rem;
+  color: var(--primary);
+  transition: color 0.3s, transform 0.2s;
+}
+
+.arrow:hover i {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .res-container {
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .res-slides {
+    gap: 0.5rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .res-card {
+    flex: 0 0 90%;
+    min-width: unset;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .res-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  .arrow i {
+    font-size: 1.6rem;
+  }
+
+  .arrow:first-of-type {
+    left: 10px;
+  }
+
+  .arrow:last-of-type {
+    right: 10px;
+  }
+
+  .carousel {
+    margin-top: 0.5rem;
+  }
+}
+
+/* ---- Team ---- */
 #team {
   text-align: center;
   padding: 80px 40px;
@@ -365,6 +521,7 @@ h2::after {
   color: var(--gray);
 }
 
+/* ---- Footer ---- */
 .footer {
   background: var(--primary);
   color: var(--white);

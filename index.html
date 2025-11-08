@@ -6,8 +6,10 @@
     <title>Poverty Analysis in the Philippines</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Poppins:wght@500;600&display=swap">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!---------- HOME AND NAVBAR ---------->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="nav-left">Poverty Analysis in the Philippines</div>
@@ -18,7 +20,6 @@
             </div>
             <ul class="nav-right" id="nav-right">
                 <li><a href="#home">Home</a></li>
-                <!--<li><a href="#overview">Overview</a></li>-->
                 <li><a href="#background">Background</a></li>
                 <li><a href="#data">Data</a></li>
                 <li><a href="#methods">Methodology</a></li>
@@ -35,42 +36,10 @@
         Your browser does not support the video tag.
         </video>
     </header>
+    <!------------------------------------->
 
     <main class="container">
-        <!--
-        <section id="overview">
-            <h2>Overview</h2>
-            <div class="background">
-                <h3>Background</h3>
-                <p>Poverty is one of the oldest and most pressing societal problems, and it is clearly evident in the Philippine context. Reducing poverty is a main goal of the <b>United Nations' SDG 1 (No Poverty)</b>, which pushes for equal opportunities and a better quality of life for everyone. Despite years of development, poverty in the country is still closely tied to <b>income inequality</b>, <b>inflation</b>, <b>regional differences</b>, and <b>employment challenges</b> that affect many Filipino families.</p>
-                <p>To better understand and address these issues, national and international institutions like the <b>Philippine Statistics Authority (PSA)</b>, <b>Asian Development Bank (ADB)</b>, and <b>World Bank</b> regularly track and publish data related to poverty. By combining and analyzing these datasets, we can gain clearer insights into the factors and trends behind poverty in the country and come up with more effective, data-driven solutions.</p>
-            </div>
-
-            <h3>Research Questions & Hypotheses</h3>
-            <div class="rq-grid">
-                <div class="rq-item">
-                    <h4>Trend Analysis</h4>
-                    <p>How does the poverty headcount ratio in the Philippines change over time?</p>
-                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> There is <mark id="hypo"><b>no significant change</b></mark> in the poverty headcount ratio over time.</p>
-                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant change in the poverty headcount ratio over time.</p></p>
-                </div>
-
-                <div class="rq-item">
-                    <h4>Poverty Determinants</h4>
-                    <p>What demographic or economic factors (e.g., GDP per capita, employment rate) are correlated with changes in poverty levels?</p>
-                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="hypo"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
-                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant correlation between the selected economic factors and poverty levels.</p>
-                </div>
-
-                <div class="rq-item">
-                    <h4>Poverty Forecasting</h4>
-                    <p>How can recent trends of these factors be used to predict the poverty headcount for <b>2025</b>?</p>
-                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> Recent economic trends <mark id="hypo"><b>cannot significantly predict</b></mark> future poverty headcount.</p></p>
-                    <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> Recent economic trends can significantly predict future poverty headcount.</p>
-                </div>
-            </div>
-        </section>
-        -->
+        <!------------- BACKGROUND ------------>
         <section id="background">
             <h2>Background</h2>
             <div class="background">
@@ -78,52 +47,113 @@
                 <p>To better understand and address these issues, national and international institutions like the <b>Philippine Statistics Authority (PSA)</b>, <b>Asian Development Bank (ADB)</b>, and <b>World Bank</b> regularly track and publish data related to poverty. By combining and analyzing these datasets, we can gain clearer insights into the factors and trends behind poverty in the country and come up with more effective, data-driven solutions.</p>
             </div>
 
-            <div class="rq-grid">
-                <div class="rq-item">
+            <div class="grid">
+                <div class="dark-item">
                     <h4>Research Questions</h4>
                     <p>1. <b>Trend Analysis</b>: How does the poverty headcount ratio in the Philippines change over time?</li></p>
                     <p>2. <b>Poverty Determinants</b>: What demographic or economic factors (e.g., GDP per capita, employment rate) are correlated with changes in poverty levels?</li></p>
                     <p>3. <b>Poverty Forecasting</b>: How can recent trends of these factors be used to predict the poverty headcount for <b>2025</b>?</li></p>
                 </div>
                 
-                <div class="rq-item">
+                <div class="dark-item">
                     <h4>Hypotheses</h4>
-                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="hypo"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
+                    <p><b>Null Hypothesis (H<sub>0</sub>):</b> <mark id="highlight"><b>No significant correlation</b></mark> exists between the selected economic factors and poverty levels.</p>
                     <p><b>Alternative Hypothesis (H<sub>1</sub>):</b> There is a significant correlation between the selected economic factors and poverty levels.</p>
                 </div>
             </div>
         </section>
+        <!------------------------------------->
 
+        <!---------------- DATA --------------->
         <section id="data">
             <h2>Data Collection & Repository</h2>
             <p>The team gathered data from both national and international sources that provide data on income, poverty incidence, country-level aggregates, and other economic indicators to ensure the reliability and comprehensiveness of our analysis. Primary sources included the <b><a href="https://psa.gov.ph/statistics/poverty">Philippine Statistics Authority (PSA)</a></b>, through its <b><i><a href="https://psa.gov.ph/statistics/income-expenditure/fies">Poverty Statistics and Family Income and Expenditure Survey (FIES)</a></i></b>, complemented by datasets from the <b><a href="ttps://dataportal.asia/dataset_vocab_economy_names-Philippines">Asia Data Portal</a></b>, <b><a href="https://data.adb.org/dataset/basic-statistics-asia-and-pacific">Asian Development Bank (ADB)</a></b>, and <b><a href="https://data.mendeley.com/datasets/s76nh7dm4v/1">Mendeley Data</a></b>. These datasets were cleaned and combined to ensure consistency across indicators, helping us analyze poverty trends and the socioeconomic factors influencing them in the Philippines.</p>
             <a href="https://docs.google.com/spreadsheets/d/1C3mfjwhgAcyrKVtep4Nv2znQQUuOI9wZynZhV250GIA/edit?usp=sharing" class="data-button" target="_blank">View Our Datasets</a>
         </section>
+        <!------------------------------------->
 
+        <!------------ METHODOLOGY ------------>
         <section id="methods">
             <h2>Methodology</h2>
-            <p>Our proposed solutions and methodology include:</p>
-            <ol>
-                <li>Use <strong>time-series analysis</strong> to track changes in poverty headcount ratio over multiple years.</li>
-                <li>Apply <strong>correlation and regression analysis</strong> (e.g., linear regression, multiple regression) to test relationships between poverty and candidate predictors (GDP per capita, employment, household income).</li>
-                <li>Develop a <strong>predictive model</strong> (time-series forecasting or machine learning regression) to project poverty rates for 2025.</li>
-            </ol>
-        </section>
+            <!-- FIX: We can probably be more specific considering we already "did it." -->
+            <div class="grid">
+                <div class="dark-item">
+                    <h4>Time-Series Analysis</h4>
+                    <p>Use time-series analysis to track changes in poverty headcount ratio over multiple years.</p>
+                </div>
+                
+                <div class="light-item">
+                    <h4>Correlation and Regression Analysis</h4>
+                    <p>Use linear regression and multiple regression to test relationships between poverty levels and economic predictors.</p>
+                </div>
 
+                <div class="dark-item">
+                    <h4>Predictive Model</h4>
+                    <p>Use time-series forecasting to project poverty levels in the Philippines for 2025.</p>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------->
+
+        <!-------------- RESULTS -------------->
         <section id="results">
             <h2>Results</h2>
-            <p>[Placeholder]</p>
-        </section>
+            <div class="res-container">
+                <button class="arrow"><i class="fas fa-chevron-circle-left"></i></button>
+                <!-- TODO: Insert pictures of the graphs and description/analysis. -->
+                <div class="res-slides">
+                    <div class="res-card">
+                        <img src="pic01.jpg" alt="[placeholder]">
+                        <h4>Research Question 1 Visualization</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
+                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
 
+                    <div class="res-card">
+                        <img src="pic02.jpg" alt="[placeholder]">
+                        <h4>Research Question 2 Visualization</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
+                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+
+                    <div class="res-card">
+                        <img src="pic03.jpg" alt="[placeholder]">
+                        <h4>Research Question 3 Visualization</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
+                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+
+                    <div class="res-card">
+                        <img src="pic04.jpg" alt="[placeholder]">
+                        <h4>Hypothesis Testing</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur porta turpis, facilisis sagittis tellus ornare nec. Etiam vel neque sapien. Ut nec tellus eu nulla molestie convallis. Integer posuere ligula sit amet quam rutrum, ac lobortis nibh iaculis. Vestibulum vitae tempor augue. Donec elementum ultricies metus quis aliquam. Aliquam fermentum tellus non fringilla efficitur. Nullam sed erat sit amet lectus rhoncus consequat. Phasellus id luctus turpis.</p>
+                        <p>Nam fringilla dictum dictum. Vestibulum posuere lorem et orci blandit tincidunt. Nullam varius mi ac libero pretium vestibulum. Proin sit amet convallis turpis. Suspendisse tristique dictum dignissim. Pellentesque luctus dui et quam scelerisque, eu mattis dolor faucibus. Morbi elementum semper massa vitae suscipit. Pellentesque id nisi quis turpis elementum porta vel egestas sem. Ut quis metus semper, interdum mauris at, imperdiet est. Etiam at eros lectus. Aliquam odio sapien, tincidunt sed vehicula eget, scelerisque sit amet eros. Phasellus luctus placerat lectus a vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+                <button class="arrow"><i class="fas fa-chevron-circle-right"></i></button>
+            </div>
+            <div class="carousel">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+        <!------------------------------------->
+
+        <!------------- CONCLUSION ------------>
         <section id="conclusion">
             <h2>Conclusion</h2>
             <p>[Placeholder]</p>
         </section>
+        <!------------------------------------->
 
+        <!---------------- TEAM --------------->
         <section id="team">
             <h2>Team</h2>
             <h4>WFR</h4>
             <div class="team-members">
+                <!-- TODO: Add details. -->
                 <div class="team-member">
                     <img src="images/anon.png" alt="Don Chavez">
                     <h3>Don Chavez</h3>
@@ -136,6 +166,7 @@
                     <p>Hi! I'm Rain, a junior computer science student from UP Diliman. Outside academics, I find myself enjoying video games, binging crime documentaries, and petting random cats.</p>
                 </div>
 
+                <!-- TODO: Add details. -->
                 <div class="team-member">
                     <img src="images/anon.png" alt="Resai Mangco">
                     <h3>Resai Mangco</h3>
@@ -143,17 +174,26 @@
                 </div>
             </div>
         </section>
+        <!------------------------------------->
 
+        <!--------------- FOOTER -------------->
         <footer class="footer">
             <h4>[Group Name]</h4>
         </footer>
+        <!------------------------------------->
     </main>
     <script>
+        // -------- GENERAL --------
+        // Reload to home.
         window.onload = function() {
             if (window.location.hash) { window.location.hash = ''; }
             window.scrollTo(0, 0);
         };
+        // -------------------------
 
+        // --------- HOME ----------
+        // When the screen is small enough, change the navbar to hamburger.
+        // This is also a helper for the navbar aesthetics when moving from home to sections below.
         const hamburger = document.getElementById('hamburger');
         const navRight = document.getElementById('nav-right');
         const navbar = document.querySelector('.navbar');
@@ -170,6 +210,51 @@
 
         window.addEventListener('scroll', scroller);
         window.addEventListener('resize', scroller);
+        // -------------------------
+
+        // -------- RESULTS --------
+        // This allows the user to toggle through the results using on-screen arrows, dots, or keyboard arrow keys.
+        const graphs = document.querySelectorAll('.res-card');
+        const dots = document.querySelectorAll('.dot');
+        const arwBtn = document.querySelectorAll('.arrow');
+        const res = document.querySelector('#results');
+        let idx = 0;
+
+        function slider() {
+            graphs.forEach((s, i) => s.classList.toggle('active', i === idx));
+            dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+            graphs[idx].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        }
+
+        function prev() {
+            idx = (idx - 1 + graphs.length) % graphs.length;
+            slider();
+        }
+
+        function next() {
+            idx = (idx + 1) % graphs.length;
+            slider();
+        }
+
+        arwBtn[0].addEventListener('click', prev);
+        arwBtn[1].addEventListener('click', next);
+
+        dots.forEach((dot, i) => dot.addEventListener('click', () => {
+            idx = i;
+            slider();
+        }));
+
+        document.addEventListener('keydown', (e) => {
+            const onres = res.getBoundingClientRect().top < window.innerHeight && res.getBoundingClientRect().bottom > 0;
+            
+            if (onres) {
+                if (e.key === 'ArrowRight') { next(); }
+                else if (e.key === 'ArrowLeft') { prev(); }
+            }
+        });
+
+        slider();
+        // -------------------------
     </script>
 </body>
 </html>
